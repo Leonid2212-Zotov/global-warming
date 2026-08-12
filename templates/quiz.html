@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+  >
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../static/css/style.css">
+  <title>глобальное потепление </title>
+</head>
+<body>
+  <header class="header">
+    <div class="header__text">
+      <h1>глобальное потепление </h1>
+      <p>что такое глобальное потепление!</p>
+      <a class="header__link" href="/">ну главную страницу</a>
+    </div>
+  </header>
+  <main>
+    {% block content %}
+    <p><b>Глобальное потепление</b> — это постепенное, длительное повышение средней температуры воздуха у поверхности планеты. Оно связано с усилением так называемого парникового эффекта, когда атмосфера удерживает больше тепла, чем необходимо</p>
+    <h3>виктарина</h3>
+    <form method="POST">
+    <p>{{ question }}</p>
+    {% for opt in options %}
+        <label>
+            <input type="radio" name="answer" value="{{ loop.index0 }}" required> {{ opt }}
+        </label><br>
+    {% endfor %}
+    <button type="submit">Ответить</button>
+</form>
+    {% endblock %}
+  </main>
+  <footer>
+
+  </footer>
+</body>
+</html>
+
